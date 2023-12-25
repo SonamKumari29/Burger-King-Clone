@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReinBucks Website Landing Page</title>
+    <link rel="stylesheet" href="styles.css" >
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.png" class="logo" alt="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Burger<br>It's <span>Burger King</span></h2>
+                <p>Welcome to Burger King, where passion for food meets a dedication to excellence. Indulge in the extraordinary as you discover our meticulously crafted foods and deliciouous and tasty. It's not just Burger; it's Burger King – the epitome of exceptional taste and uncompromising quality.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="fries.png" alt="cup-image" class="starbucks">
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png" alt="icon"></a></li>
+            <li><a href="#"><img src="twitter.png" alt="icon"></a></li>
+            <li><a href="#"><img src="instagram.png" alt="icon"></a></li>
+        </ul>
+    </section>
+    <div class="box">
+        <ul class="thumb">
+            <li><img src="fries_thumb.png" alt="pic1" onclick="imgSlider('fries.png');changeCircleColor('#017143')"></li>
+            <li><img src="nuggets_thumb.png" alt="pic1" onclick="imgSlider('nugget.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="burger_thumb.webp" alt="pic1" onclick="imgSlider('burger.png');changeCircleColor('#d752b1')"></li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+</html>
